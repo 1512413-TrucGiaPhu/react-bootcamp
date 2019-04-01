@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
-import SOCIAL_PROFILES from './data/socialProfiles';
+import React from 'react';
+import SOCIAL_PROFILES from '../data/socialProfiles';
 
-class SocialProfile extends Component {
-    render() {
-        const { link, image } = this.props.socialProfile;
-        
+const SocialProfile = props => {
+    const { link, image } = props.socialProfile;    
 
     return (
         <span>
@@ -14,23 +12,22 @@ class SocialProfile extends Component {
         </span>
         )
     }
-}
 
-class SocialProfiles extends Component {
-    render() {
+const SocialProfiles = () => {
         return (
             <div>
                 <h2>Connect with me</h2>
                 <div>
                     {
                         SOCIAL_PROFILES.map(SOCIAL_PROFILES => {
-                            return <SocialProfile key={SOCIAL_PROFILES.id} socialProfile={SOCIAL_PROFILES} />
+                            return <SocialProfile 
+                            key={SOCIAL_PROFILES.id}
+                             socialProfile={SOCIAL_PROFILES} />
                         })
                     }
                 </div>
             </div>
         )
     }
-}
 
 export default SocialProfiles;

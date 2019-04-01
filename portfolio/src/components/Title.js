@@ -27,13 +27,14 @@ class Title extends Component {
             this.setState({ titleIndex , fadeIn: true });
 
             
-            this.timeout = setTimeout(()=> this.setState({ fadeIn: false}),2000)
+            this.timeout = setTimeout(()=> 
+                this.setState({ fadeIn: false}),2000)
         }, 4000)
     }
 
     render() {
 
-        const { fadeIn, titleIndex } = this.state;
+        const { fadeIn } = this.state;
 
         const title = TITLES[this.state.titleIndex];
 
