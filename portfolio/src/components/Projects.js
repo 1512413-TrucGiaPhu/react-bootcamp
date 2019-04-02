@@ -19,11 +19,11 @@ const Projects = () => (
                 <h2>Higlighted Projects</h2>
                 <div>
                     {
-                        PROJECTS.map(PROJECT => {
-                            return (
-                                <Project key={PROJECT.id} project={PROJECT} />
-                            )
-                        })
+                     PROJECTS.map(PROJECT => {
+                         return (
+                          <Project key={PROJECT.id} project={PROJECT} />
+                         )
+                     })
                     }
                 </div>
             </div>
